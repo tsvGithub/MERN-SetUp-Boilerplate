@@ -11,19 +11,29 @@
     9. $ git remote add origin https://github.com/tsvGithub/....git
     10. $ git push -u origin master
     11. $ git status
-    ===============================
+    ============================
     Install dependencies:
     12. $ npm install express mongoose cors dotenv  --save
     13. $ npm install nodemon -g
     14. $ npm install concurrently -g
     15. $ npx create-react-app client
 
-## To Install Dependencies Make Sure You Are In Root Directory And Run Following Command npm run install-all
+NB!To Install Dependencies Make Sure You Are In Root Directory And Run Following Command npm run install-all To Run Application In Development Mode Run npm run dev
 
-To Run Application In Development Mode Run The Following Command npm run dev
+    ===============================
 
-========================== 1. .env => • DATABASEURL=mongodb://localhost:27017/<databasetName> • Atlas_URI=…
+.env => • DATABASEURL=mongodb://localhost:27017/databasetName • Atlas_URI=…
 
-============================== Scripts: 1. backend: package.json => "scripts": {     "test": "echo \"Error: no test specified\" && exit 1",     "start": "node app",     "client": "cd client && npm run start",     "server": "nodemon app --ignore client/",     "client-install": "cd client && npm install",     "server-install": "npm install",     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\"",     "dev": "concurrently \"npm run client\" \"npm run server\"",     "heroku-postbuild": "cd client && npm install && npm run build"   }, --------------------------- 2. client: package.json =>  "proxy": "http://localhost:5000"
+    ==============================
 
-================================================ models => Something.model.js
+Scripts: backend: package.json => "scripts":  {     "test": "echo \"Error: no test specified\" && exit 1",     "start": "node app",     "client": "cd client && npm run start",     "server": "nodemon app --ignore client/",     "client-install": "cd client && npm install",     "server-install": "npm install",     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\"",     "dev": "concurrently \"npm run client\" \"npm run server\"",     "heroku-postbuild": "cd client && npm install && npm run build"   },
+
+    client: package.json =>  "proxy": "http://localhost:5000"
+
+    =========================
+    models => Something.model.js
+
+    =========================
+    folder 'routes' => routes.js (inside require Model.js)
+
+    app.js -> require routes.js
