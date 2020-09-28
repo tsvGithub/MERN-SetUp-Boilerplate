@@ -10,7 +10,6 @@ app.use(express.json());
 
 //============== ROUTES ===================
 const examplesRouter = require("./routes/ExampleRoutes");
-//if root url starts with /examplesRoutes it's going to load everithing in examplesRouter
 app.use("/examplesRoutes", examplesRouter);
 
 //================ ENVIROMENT VARIABLES =========
